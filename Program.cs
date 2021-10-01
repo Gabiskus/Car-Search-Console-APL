@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,8 +19,6 @@ public class Automobil
         cena = cena1;
     }
 }
-
-
 
 namespace Automobili
 {
@@ -58,6 +56,7 @@ namespace Automobili
             Automobil auto28 = new Automobil("Nissan", "Zafira", 1998, 178560.6, 1700);
 
             List<Automobil> garaza = new List<Automobil>();
+
             garaza.Add(auto1);
             garaza.Add(auto2);
             garaza.Add(auto3);
@@ -101,7 +100,7 @@ namespace Automobili
             {
                 Console.WriteLine("=============================================");
                 Console.WriteLine("[1] Unesite ili Zamenite Raspon cena (" + mincena + "e-" + maxcena + "e)");
-                Console.WriteLine("[2] Unesite ili Zamenite Brend Automobila (" + pbrend + ")" );
+                Console.WriteLine("[2] Unesite ili Zamenite Brend Automobila (" + pbrend + ")");
                 Console.WriteLine("[3] Unesite ili Zamenite Model Automobila (" + pmodel + ")");
                 Console.WriteLine("[4] Unesite ili Zamenite Godiste Automobila (" + mingodiste + ".g-" + maxgodiste + ".g)");
                 Console.WriteLine("[5] Unesite ili Zamenite Predjenu Kilometrazu (" + minkilometraza + "km-" + maxkilometraza + "km)");
@@ -119,7 +118,7 @@ namespace Automobili
                         mincena = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Unesite maximalnu cenu Automobila [Max: 1000000]: ");
                         maxcena = Convert.ToInt32(Console.ReadLine());
-                        if(mincena > maxcena)
+                        if (mincena > maxcena)
                         {
                             mincena = 0;
                             maxcena = 1000000;
@@ -130,6 +129,7 @@ namespace Automobili
                         }
                         break;
                     case "2":
+                        ebrend = 1;
                         Console.WriteLine("Izaberi Brend Automobila");
                         Console.WriteLine("[1] BMW");
                         Console.WriteLine("[2] Audi");
@@ -144,50 +144,42 @@ namespace Automobili
                         switch (ulaz3)
                         {
                             case "1":
-                                ebrend = 1;
                                 pbrend = "BMW";
                                 break;
                             case "2":
-                                ebrend = 1;
                                 pbrend = "Audi";
                                 break;
                             case "3":
-                                ebrend = 1;
                                 pbrend = "Skoda";
                                 break;
                             case "4":
-                                ebrend = 1;
                                 pbrend = "Opel";
                                 break;
                             case "5":
-                                ebrend = 1;
                                 pbrend = "Dacia";
                                 break;
                             case "6":
-                                ebrend = 1;
                                 pbrend = "Volkswagen";
                                 break;
                             case "7":
-                                ebrend = 1;
                                 pbrend = "Toyota";
                                 break;
                             case "8":
-                                ebrend = 1;
                                 pbrend = "Nissan";
                                 break;
                             case "9":
-                                ebrend = 1;
                                 pbrend = "Tesla";
                                 break;
                             default:
                                 Console.WriteLine("Pogrsan broj je izabran");
+                                ebrend = 0;
                                 continue;
                         }
-                                break;
+                        break;
                     case "3":
-                        if(ebrend == 1)
+                        if (ebrend == 1)
                         {
-                            switch(pbrend)
+                            switch (pbrend)
                             {
                                 case "BMW":
                                     emodel = 1;
@@ -380,7 +372,7 @@ namespace Automobili
                         mingodiste = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Unesite krajnju godinu: ");
                         maxgodiste = Convert.ToInt32(Console.ReadLine());
-                        if(mingodiste > maxgodiste)
+                        if (mingodiste > maxgodiste)
                         {
                             mingodiste = 1950;
                             maxgodiste = 2022;
@@ -388,7 +380,7 @@ namespace Automobili
                             Console.WriteLine("Minimalna godina ne moze biti veca od maximalne godine");
                             Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                         }
-                        if(mingodiste < 1950 || maxgodiste > 2022)
+                        if (mingodiste < 1950 || maxgodiste > 2022)
                         {
                             mingodiste = 1950;
                             maxgodiste = 2022;
@@ -402,7 +394,7 @@ namespace Automobili
                         minkilometraza = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Unesite krajnju kilometrazu: ");
                         maxkilometraza = Convert.ToInt32(Console.ReadLine());
-                        if(minkilometraza > maxkilometraza)
+                        if (minkilometraza > maxkilometraza)
                         {
                             minkilometraza = 0;
                             maxkilometraza = 1000000;
@@ -472,7 +464,7 @@ namespace Automobili
                                 Console.WriteLine("Pogrsan broj je izabran");
                                 continue;
                         }
-                                break;
+                        break;
                     case "7":
                         mincena = 0;
                         maxcena = 1000000;
