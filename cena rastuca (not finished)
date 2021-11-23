@@ -413,39 +413,25 @@ namespace Automobili
                         }
                         break;
                     case "6":
-                            for (int n = 0; n < garaza.Count(); n++)
+                        for (int n = 0; n < garaza.Count(); n++)
+                        {
+                            if (ebrend == 1 && pbrend == garaza[n].brend)
                             {
-                                if (ebrend == 1 && pbrend == garaza[n].brend)
+                                if (emodel == 1 && pmodel == garaza[n].model)
                                 {
-                                    if (emodel == 1 && pmodel == garaza[n].model)
+                                    if (minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste)
                                     {
-                                        if (minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste)
+                                        if (mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste)
                                         {
-                                            if (mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste)
-                                            {
 
-                                                if (garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
-                                                {
-                                                    size++;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    else if (emodel == 0)
-                                    {
-                                        if (minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste)
-                                        {
-                                            if (mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste)
+                                            if (garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
                                             {
-                                                if (garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
-                                                {
-                                                    size++;
-                                                }
+                                                size++;
                                             }
                                         }
                                     }
                                 }
-                                else if (ebrend == 0)
+                                else if (emodel == 0)
                                 {
                                     if (minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste)
                                     {
@@ -459,6 +445,20 @@ namespace Automobili
                                     }
                                 }
                             }
+                            else if (ebrend == 0)
+                            {
+                                if (minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste)
+                                {
+                                    if (mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste)
+                                    {
+                                        if (garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
+                                        {
+                                            size++;
+                                        }
+                                    }
+                                }
+                            }
+                        }
 
                         niz = new int[size];
 
@@ -511,26 +511,42 @@ namespace Automobili
                                 }
                             }
                         }
-
                         k = 0;
-                        switch  (sortswitch)
+                        switch (sortswitch)
                         {
                             case 1:
-                                while (k < j + 1)
+
+                                while (k < j + 2)
                                 {
-                                    k++;
-                                    
-                                    for(int l = 0; l + 2 < size; l++)
+                                    int l = 0;
+                                    Console.WriteLine(niz[l]);
+                                    for (l = 0; l + 2 < size; l++)
                                     {
                                         if (garaza[niz[l]].cena > garaza[niz[l + 1]].cena)
                                         {
-                                            double a = garaza[niz[l]].cena;
-                                            garaza[niz[l]].cena = garaza[niz[l + 1]].cena;
-                                            garaza[niz[l + 1]].cena = a;
+                                            double a = garaza[niz[l + 1]].cena;
+                                            garaza[niz[l + 1]].cena = garaza[niz[l]].cena;
+                                            garaza[niz[l]].cena = a;
+                                            int b = garaza[niz[l + 1]].id;
+                                            garaza[niz[l + 1]].id = garaza[niz[l]].id;
+                                            garaza[niz[l]].id = b;
+                                            int c = garaza[niz[l + 1]].godiste;
+                                            garaza[niz[l + 1]].godiste = garaza[niz[l]].godiste;
+                                            garaza[niz[l]].godiste = c;
+                                            double d = garaza[niz[l + 1]].predjenakm;
+                                            garaza[niz[l + 1]].predjenakm = garaza[niz[l]].predjenakm;
+                                            garaza[niz[l]].predjenakm = d;
+                                            string e = garaza[niz[l + 1]].brend;
+                                            garaza[niz[l + 1]].brend = garaza[niz[l]].brend;
+                                            garaza[niz[l]].brend = e;
+                                            string f = garaza[niz[l + 1]].model;
+                                            garaza[niz[l + 1]].model = garaza[niz[l]].model;
+                                            garaza[niz[l]].model = f;
                                         }
                                     }
+                                    k++;
                                 }
-                                for(int l = 0; l < size; l++)
+                                for (int l = 0; l < size; l++)
                                 {
                                     Console.WriteLine(garaza[l].brend + " " + garaza[l].model + " " + garaza[l].godiste + " " + garaza[l].predjenakm + " km " + garaza[l].cena + " e");
                                 }
@@ -611,7 +627,6 @@ namespace Automobili
 
 
                         size = 0;
-                        cou = 0;
                         j = 0;
                         k = 0;
                         Console.WriteLine("[1] Nastavi sa programom");
@@ -712,4 +727,3 @@ namespace Automobili
         }
     }
 }
-
