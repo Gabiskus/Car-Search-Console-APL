@@ -28,34 +28,34 @@ namespace Automobili
     {
         static void Main(string[] args)
         {
-            Automobil auto1 = new Automobil(1, "Audi", "A6", 2005, 246749.5, 5200);
-            Automobil auto2 = new Automobil(2, "Dacia", "Sandero", 2013, 109505.3, 3990);
-            Automobil auto3 = new Automobil(3, "Audi", "A4", 2005, 304000.2, 4190);
-            Automobil auto4 = new Automobil(4, "Audi", "A7", 2014, 186000.6, 28900);
-            Automobil auto5 = new Automobil(5, "Skoda", "Yeti", 2010, 251000.2, 6690);
-            Automobil auto6 = new Automobil(6, "Skoda", "Octavia", 2006, 186000.6, 3995);
-            Automobil auto7 = new Automobil(7, "Volkswagen", "Golf 4", 2001, 220000.6, 1000);
-            Automobil auto8 = new Automobil(8, "Volkswagen", "Golf 4", 2001, 264615.4, 1800);
-            Automobil auto9 = new Automobil(9, "Skoda", "Fabia", 2004, 260000.6, 2150);
-            Automobil auto10 = new Automobil(10, "Skoda", "Fabia", 2014, 177735.4, 9699);
-            Automobil auto11 = new Automobil(11, "Volkswagen", "Golf 7", 2015, 192753.4, 11290);
-            Automobil auto12 = new Automobil(12, "Volkswagen", "Touran", 2005, 197000, 3750);
-            Automobil auto13 = new Automobil(13, "BMW", "M5", 2006, 255500.7, 15000);
-            Automobil auto14 = new Automobil(14, "BMW", "X3", 2020, 19600.6, 55000);
-            Automobil auto15 = new Automobil(15, "BMW", "X6", 2014, 241326.7, 24999);
-            Automobil auto16 = new Automobil(16, "Dacia", "Duster", 2012, 185354.8, 6950);
-            Automobil auto17 = new Automobil(17, "Dacia", "Pickup", 1998, 123628.7, 300);
-            Automobil auto18 = new Automobil(18, "Toyota", "Supra", 1992, 56500.9, 14000);
-            Automobil auto19 = new Automobil(19, "Toyota", "Carina", 1997, 250000.8, 400);
-            Automobil auto20 = new Automobil(20, "Toyota", "Corona", 1968, 168000.6, 1500);
-            Automobil auto21 = new Automobil(21, "Tesla", "Model S", 2017, 121000.6, 25000);
-            Automobil auto22 = new Automobil(22, "Tesla", "Model 3", 2021, 9800.8, 56000);
-            Automobil auto23 = new Automobil(23, "Opel", "Astra", 2008, 177600.6, 3300);
-            Automobil auto24 = new Automobil(24, "Opel", "Zafira", 2007, 183575.6, 3000);
-            Automobil auto25 = new Automobil(25, "Opel", "Corsa", 2004, 162367.9, 2600);
-            Automobil auto26 = new Automobil(26, "Nissan", "X-Trail", 2008, 185000.6, 6490);
-            Automobil auto27 = new Automobil(27, "Nissan", "Pixo", 2009, 66100.6, 3290);
-            Automobil auto28 = new Automobil(28, "Nissan", "Zafira", 1998, 178560.6, 1700);
+            Automobil auto1 = new Automobil(0, "Audi", "A6", 2005, 246749.5, 5200);
+            Automobil auto2 = new Automobil(1, "Dacia", "Sandero", 2013, 109505.3, 3990);
+            Automobil auto3 = new Automobil(2, "Audi", "A4", 2005, 304000.2, 4190);
+            Automobil auto4 = new Automobil(3, "Audi", "A7", 2014, 186000.6, 28900);
+            Automobil auto5 = new Automobil(4, "Skoda", "Yeti", 2010, 251000.2, 6690);
+            Automobil auto6 = new Automobil(5, "Skoda", "Octavia", 2006, 186000.6, 3995);
+            Automobil auto7 = new Automobil(6, "Volkswagen", "Golf 4", 2001, 220000.6, 1000);
+            Automobil auto8 = new Automobil(7, "Volkswagen", "Golf 4", 2001, 264615.4, 1800);
+            Automobil auto9 = new Automobil(8, "Skoda", "Fabia", 2004, 260000.6, 2150);
+            Automobil auto10 = new Automobil(9, "Skoda", "Fabia", 2014, 177735.4, 9699);
+            Automobil auto11 = new Automobil(10, "Volkswagen", "Golf 7", 2015, 192753.4, 11290);
+            Automobil auto12 = new Automobil(11, "Volkswagen", "Touran", 2005, 197000, 3750);
+            Automobil auto13 = new Automobil(12, "BMW", "M5", 2006, 255500.7, 15000);
+            Automobil auto14 = new Automobil(13, "BMW", "X3", 2020, 19600.6, 55000);
+            Automobil auto15 = new Automobil(14, "BMW", "X6", 2014, 241326.7, 24999);
+            Automobil auto16 = new Automobil(15, "Dacia", "Duster", 2012, 185354.8, 6950);
+            Automobil auto17 = new Automobil(16, "Dacia", "Pickup", 1998, 123628.7, 300);
+            Automobil auto18 = new Automobil(17, "Toyota", "Supra", 1992, 56500.9, 14000);
+            Automobil auto19 = new Automobil(18, "Toyota", "Carina", 1997, 250000.8, 400);
+            Automobil auto20 = new Automobil(19, "Toyota", "Corona", 1968, 168000.6, 1500);
+            Automobil auto21 = new Automobil(20, "Tesla", "Model S", 2017, 121000.6, 25000);
+            Automobil auto22 = new Automobil(21, "Tesla", "Model 3", 2021, 9800.8, 56000);
+            Automobil auto23 = new Automobil(22, "Opel", "Astra", 2008, 177600.6, 3300);
+            Automobil auto24 = new Automobil(23, "Opel", "Zafira", 2007, 183575.6, 3000);
+            Automobil auto25 = new Automobil(24, "Opel", "Corsa", 2004, 162367.9, 2600);
+            Automobil auto26 = new Automobil(25, "Nissan", "X-Trail", 2008, 185000.6, 6490);
+            Automobil auto27 = new Automobil(26, "Nissan", "Pixo", 2009, 66100.6, 3290);
+            Automobil auto28 = new Automobil(27, "Nissan", "Zafira", 1998, 178560.6, 1700);
 
             List<Automobil> garaza = new List<Automobil>();
 
@@ -520,7 +520,7 @@ namespace Automobili
                                 {
                                     int l = 0;
                                     Console.WriteLine(niz[l]);
-                                    for (l = 0; l + 2 < size; l++)
+                                    for (l = 0; l + 1 < size; l++)
                                     {
                                         if (garaza[niz[l]].cena > garaza[niz[l + 1]].cena)
                                         {
