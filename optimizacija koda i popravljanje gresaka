@@ -88,6 +88,38 @@ namespace Automobili
             garaza.Add(auto27);
             garaza.Add(auto28);
 
+            List<Automobil> garaza1 = new List<Automobil>();
+            
+            garaza1.Add(auto1);
+            garaza1.Add(auto2);
+            garaza1.Add(auto3);
+            garaza1.Add(auto4);
+            garaza1.Add(auto5);
+            garaza1.Add(auto6);
+            garaza1.Add(auto7);
+            garaza1.Add(auto8);
+            garaza1.Add(auto9);
+            garaza1.Add(auto10);
+            garaza1.Add(auto11);
+            garaza1.Add(auto12);
+            garaza1.Add(auto13);
+            garaza1.Add(auto14);
+            garaza1.Add(auto15);
+            garaza1.Add(auto16);
+            garaza1.Add(auto17);
+            garaza1.Add(auto18);
+            garaza1.Add(auto19);
+            garaza1.Add(auto20);
+            garaza1.Add(auto21);
+            garaza1.Add(auto22);
+            garaza1.Add(auto23);
+            garaza1.Add(auto24);
+            garaza1.Add(auto25);
+            garaza1.Add(auto26);
+            garaza1.Add(auto27);
+            garaza1.Add(auto28);
+
+
             string sortcheck = "Nesortiran";
             int sortswitch = 0;
             int i = 1;
@@ -413,6 +445,8 @@ namespace Automobili
                         }
                         break;
                     case "6":
+                        
+                        j = 0;
                         for (int n = 0; n < garaza.Count(); n++)
                         {
                             if (ebrend == 1 && pbrend == garaza[n].brend)
@@ -423,6 +457,7 @@ namespace Automobili
                                     if (sortswitch == 0)
                                     {
                                         Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
+                                        Console.WriteLine("SortSwitch je 0");
                                     }
                                 }
                                 else if (emodel == 0 && minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste && mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste && garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
@@ -431,6 +466,7 @@ namespace Automobili
                                     if (sortswitch == 0)
                                     {
                                         Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
+                                        Console.WriteLine("SortSwitch je 0");
                                     }
                                 }
                             }
@@ -441,6 +477,7 @@ namespace Automobili
                                 if (sortswitch == 0)
                                 {
                                     Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
+                                    Console.WriteLine("SortSwitch je 0");
                                 }
                             }
                         }
@@ -470,6 +507,12 @@ namespace Automobili
                             }
                         }
                         k = 0;
+                        for (int n = 0; n < garaza.Count(); n++)
+                        {
+                            garaza[n] = garaza1[n];
+                            niz[n] = n;
+                            Console.WriteLine(niz[n]);
+                        }
                         if (sortswitch != 0)
                         {
 
@@ -506,27 +549,30 @@ namespace Automobili
                                         }
                                         k++;
                                     }
-                                    
-                                        for (int n = 0; n < garaza.Count(); n++)
-                                        {
-                                            if (ebrend == 1 && pbrend == garaza[n].brend)
-                                            {
-                                                if (emodel == 1 && pmodel == garaza[n].model && minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste && mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste && garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
-                                                {
-                                                    Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
-                                                }
-                                                else if (emodel == 0 && minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste && mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste && garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
-                                                {
-                                                    Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
-                                                }
-                                            }
-                                            else if (ebrend == 0 && minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste && mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste && garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
-                                            {
 
+                                    for (int n = 0; n < garaza.Count(); n++)
+                                    {
+                                        if (ebrend == 1 && pbrend == garaza[n].brend)
+                                        {
+                                            if (emodel == 1 && pmodel == garaza[n].model && minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste && mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste && garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
+                                            {
+                                                Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
+                                            }
+                                            else if (emodel == 0 && minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste && mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste && garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
+                                            {
                                                 Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
                                             }
                                         }
-                                    
+                                        else if (ebrend == 0 && minkilometraza <= garaza[n].predjenakm && maxkilometraza >= garaza[n].godiste && mingodiste <= garaza[n].godiste && maxgodiste >= garaza[n].godiste && garaza[n].cena >= mincena && garaza[n].cena <= maxcena)
+                                        {
+
+                                            Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
+                                        }
+                                    }
+                                    for (int n = 0; n < size; n++)
+                                    {
+                                        Console.WriteLine(niz[n]);
+                                    }
                                     break;
                                 case 2:
                                     Console.WriteLine("Sortirano po ceni opadajuce: ");
@@ -578,7 +624,10 @@ namespace Automobili
                                             Console.WriteLine(garaza[n].brend + " " + garaza[n].model + " " + garaza[n].godiste + " " + garaza[n].predjenakm + " km " + garaza[n].cena + " e");
                                         }
                                     }
-
+                                    for (int n = 0; n < size; n++)
+                                    {
+                                        Console.WriteLine(niz[n]);
+                                    }
                                     break;
                                 case 3:
                                     Console.WriteLine("Sortirano po predjenoj kilometrazi rastuce: ");
@@ -790,12 +839,11 @@ namespace Automobili
                                     break;
                                 case 7:
                                     Console.WriteLine("7");
-                                    if ()
-                                    while (k < j)
-                                    {
-                                        
-                                        k++;
-                                    }
+                                        while (k < j)
+                                        {
+
+                                            k++;
+                                        }
                                     break;
                                 case 8:
                                     Console.WriteLine("8");
@@ -821,6 +869,9 @@ namespace Automobili
                         size = 0;
                         j = 0;
                         k = 0;
+
+                        
+                        niz = new int[0];
                         Console.WriteLine("[1] Nastavi sa programom");
                         Console.WriteLine("[2] Zaustavi program");
                         string ulaz2 = Console.ReadLine();
@@ -849,6 +900,9 @@ namespace Automobili
                         pbrend = "Neselektovan";
                         sortcheck = "Nesortiran";
                         sortswitch = 0;
+                        size = 0;
+                        j = 0;
+                        k = 0;
                         break;
                     case "8":
                         i = 0;
